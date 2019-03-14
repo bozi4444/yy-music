@@ -177,7 +177,7 @@ var Footer = {
   
   render: function(){
     var _this = this
-    $.getJSON('http://api.jirengu.com/fm/getChannels.php')
+    $.getJSON('https://api.jirengu.com/fm/getChannels.php')
       .done(function(ret){
        console.log(ret)
        _this.renderFooter(ret.channels)
@@ -261,7 +261,7 @@ var Footer = {
    loadMusic(callback){
       console.log('loadMusic...')
       var _this = this
-      $.getJSON('http://api.jirengu.com/fm/getSong.php',{channel:
+      $.getJSON('https://api.jirengu.com/fm/getSong.php',{channel:
        _this.channelId}).done(function(ret){
        _this.song = ret['song'][0] 
        _this.setMusic()
